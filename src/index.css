@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+  --su-red100: #f9e0de;
+  --su-red200: #e59892;
+  --su-red400: #dd361c;
+  --su-red500: #c62d1f;
+  --su-red600: #99231b;
+  --su-yellow100: #ffebd1;
+  --su-yellow200: #ffc375;
+  --su-yellow300: #f9aa43;
+  --su-yellow400: #ff9d1e;
+  --su-green100: #e7f4e4;
+  --su-green200: #94bfa2;
+  --su-green400: #4aa564;
+  --su-green500: #2e8540;
+  --su-cyan100: #e1f3f8;
+  --su-cyan200: #9bdaf1;
+  --su-cyan400: #02bfe7;
+  --su-cyan500: #00a6d2;
+  --su-cyan600: #046b99;
+  --su-blue100: #dce4ef;
+  --su-blue200: #8ba6ca;
+  --su-blue300: #4773aa;
+  --su-blue400: #205493;
+  --su-indigo100: #dce4ef;
+  --su-indigo400: #105bd8;
+  --su-indigo500: #0b3d91;
+  --su-blue700: #061f4a;
+  --su-purple100: #d8d0ea;
+  --su-purple200: #a495c4;
+  --su-purple300: #6c5799;
+  --su-purple400: #4c2c92;
+  --su-grey100: #f1f1f1;
+  --su-grey200: #d6d7d9;
+  --su-grey300: #aeb0b5;
+  --su-grey400: #5b616b;
+  --su-grey500: #323a45;
+  --su-brown100: #e4e2e0;
+  --su-brown400: #494440;
+  --su-black: #212121;
+  --su-white: #ffffff;
+
+  --su-t1: 100ms;
+
+  --su-surface: var(--su-white);
+  --su-base: var(--su-black);
+  --su-shadow: rgba(174, 176, 181, 0.6);
+
+  --su-success: var(--su-green400);
+  --su-info: var(--su-indigo400);
+  --su-warning: var(--su-yellow400);
+  --su-failure: var(--su-red400);
+  --su-debug: var(--su-purple400);
+  --su-accent: var(--su-red400);
+
+  --su-texture-disabled: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 80 80'%3E%3Cg fill='%23000000' fill-opacity='0.5'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  --su-texture-disabled: url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.7' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+:root {
+  font-family: "Spline Sans Mono", "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  font-variation-settings: "wdth" 100;
+
+  /* box-sizing: border-box; */
+
+  color-scheme: light dark;
+  color: var(--su-base);
+  background-color: var(--su-surface);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --su-surface: var(--su-black);
+    --su-base: var(--su-grey200);
+    /* --su-success: var(--su-green200); */
+    /* --su-info: var(--su-blue200); */
+    /* --su-warning: var(--su-yellow200); */
+    /* --su-failure: var(--su-red200); */
+    /* --su-debug: var(--su-purple200); */
+  }
+}
+
+/*********************************************************/
+/****************** THIS IS APP STUFF ********************/
+/*********************************************************/
+
+:root {
+  /* --su-base: rgb(45, 255, 196); */
+  /* text-shadow: 0 0 4px var(--su-base); */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* background-color: var(--su-grey200); */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+article {
+  padding: 0 1em 1em;
+  border: 1px solid var(--su-base);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1em;
+  margin: 1em;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  border-bottom: 1px solid var(--su-base);
+  margin: 0.3rem 0;
+}
+
+fieldset:invalid {
+  border: 2px solid red;
+}
+
+input:invalid {
+  border: 2px solid blue;
+}
