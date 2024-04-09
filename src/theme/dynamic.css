@@ -60,7 +60,7 @@
 }
 
 :root {
-  font-family: "Spline Sans Mono", "Inconsolata", monospace;
+  font-family: "Spline Sans Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -134,10 +134,3 @@ hr {
   margin: 0.3rem 0;
 }
 
-fieldset:invalid {
-  border: 2px solid red;
-}
-
-input:invalid {
-  border: 2px solid blue;
-}
