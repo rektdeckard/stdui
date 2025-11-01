@@ -456,7 +456,21 @@ export const ContextMenu: Story = {
               Google Slides
               <ph-presentation-chart weight="regular" slot="icon"></ph-presentation-chart>
             </su-menu-item>
-            <su-menu-item icon>
+            <su-menu-item icon @click=${(e) => {
+        function close() {
+          ctx.hide()
+        }
+        const ctx = createContextMenu(html`\
+                <div>
+                  <textarea></textarea>
+                  <div>
+                    <su-button @click=${close}>Close</su-button>
+                    <su-button status="primary" @click=${close}>Save</su-button>
+                  </div>
+                </div>
+              `)
+        ctx.show(e);
+      }}>
               Text Document
               <ph-file-text weight="regular" slot="icon"></ph-file-text>
             </su-menu-item>
